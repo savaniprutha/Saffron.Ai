@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saffron.Ai </title>
+
+    <!-- favicon CSS -->
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!-- Custon CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- bootstrap CSS 5.2 -->
+  
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <style>
+    .event-info .parent-gallery {
+        /* max-height: 1000px; */
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .box {
+        width: calc(33.333% - 10px); 
+        box-sizing: border-box;
+    }
+
+    .gallery.scroll {
+      display: flex;
+      overflow-x: hidden;
+    }
+    </style>
+
+ 
+  </head>
+
+  <body style="background-color: #15191F;">
+
+    <nav class="navbar bg-faded fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-container">
+          <div class="navbar-main">
+            <div class="navbar-content">
+              <a class="flex-grow-1" href="/"
+                ><img id="logo" src="assets/img/logo-black.png" alt="saffron"
+              /></a>
+              <ul class="d-flex flex-row navbar-nav">              
+                <div class="">                  
+                    <button class="btn navbar-btn btn-solid btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                      Book Appoitment
+                  </button>
+                </div>
+              </ul>
+            </div>
+            <div class="collapse navbar-collapse">
+              <div class="">
+                <button type="button" class="btn navbar-btn btn-solid w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  LOG IN
+                  </button>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <button type="button" class="btn navbar-btn btn-border nav-login" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              LOG IN
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+<!-- Modal -->
+<div class="login-modal modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"> 
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Log in</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            <form action="">
+                <label for="number"> Enter Number</label> 
+                <input type="text" name="number" id="number" placeholder="Username Or Number" required="required"> 
+
+                <label for="password"> Enter Password</label>
+                <input type="text" name="password" id="password" placeholder="Password" required="required">
+            </form>
+            <p> Don't Have an Account? <span class="already" data-bs-toggle="modal" data-bs-target="#register-modal">Register here</span></p>
+      </div>
+      <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Log In</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- register-modal -->
+<div class="register-modal modal fade" id="register-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"> 
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            <form action="">
+                <label for="Name"> Enter Name</label> 
+                <input type="text" name="Name" id="Name" placeholder="Enter Your Name" required="required"> 
+
+                <label for="number"> Enter Email</label> 
+                <input type="text" name="number" id="number" placeholder="Enter Your E-mail" required="required"> 
+
+                <label for="password"> Create Your Password</label>
+                <input type="text" name="password" id="password" placeholder="Create Your Password" required="required">
+
+                <label for="password"> Confirm Password</label>
+                <input type="text" name="password" id="password" placeholder="Confirm Password" required="required">
+
+                <button type="submit" class="btn btn-primary register-btn">Register Now</button>
+                <p>Already have an Account? <span class="already" data-bs-toggle="modal" data-bs-target="#exampleModal">Log In</span></p>
+            </form>
+      </div>
+      <!-- <div class="modal-footer"> -->
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
+
+ <!-- Modal -->
+ <div class="book-modal modal fade " id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Book Appointment</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-5 col-12">
+                    <form action="">
+                        <label for="Username"> Username</label> 
+                        <input type="text" name="Username" id="Username" placeholder="Enter Username" required="required">
+                        
+                        <label for="email"> Number</label> 
+                        <input type="email" name="email" id="email" placeholder="Enter Number" required="required">
+        
+                        <label for="password"> Password</label>
+                        <input type="text" name="password" id="password" placeholder="Enter Password" required="required">
+                    </form>
+                </div>
+                <div class="col-lg-7 col-12">
+                    <div class="calendar"></div>
+
+                </div>
+               
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+  <!-- -------------- content start ---------- -->
+  <div class="content">
+    <div class="container">
+        <div class="evention">
+          <div class="event " onclick="showSection('abc-event')">ABC EVENT</div>
+          <div class="event" onclick="showSection('pqr-event')">PQR EVENT</div>
+          <div class="event" onclick="showSection('xyz-event')">XYZ EVENT</div>
+          <!-- <div class="event" onclick="showSection('new-event')">New EVENT</div> -->
+          <!-- <div class="event" onclick="showSection('birthday-event')">Birthday</div> -->
+          <!-- <div class="event" onclick="showSection('marriage-event')">Marriage</div> -->
+      </div>
+ 
+      <!-- ABC event -->
+      <div class="event-info" id="abc-event" style="display: inline-block;">
+        <div class="containerr">
+          <h1 class="text-center">ABC Event</h1>
+          <div class="parent-gallery">
+              <div class="gallery">
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal1.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal1.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal1.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal1.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal1.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal2.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal3.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal4.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal5.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal6.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal7.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal8.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal9.jpg" alt="image">
+                  </picture>
+                </div>
+              </div>
+            </div>
+      </div>
+      
+        <center>
+            <button class="btn btn-home btn-primary"><a href="#">Download All Image</a></button>
+        </center>
+      </div>
+
+     <!-- PQR event -->
+     <div class="event-info" id="pqr-event" style="display: none;" >
+      <div class="containerr">
+        <h1 class="text-center">PQR Event</h1>
+        <div class="parent-gallery">
+            <div class="gallery">
+              
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal1.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal1.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal1.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal1.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal1.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal2.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal3.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal4.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal5.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal6.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal7.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal8.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal9.jpg" alt="image">
+                </picture>
+              </div>
+            </div>
+          </div>
+    </div>
+    
+      <center>
+          <button class="btn btn-home btn-primary"><a href="#">Download All Image</a></button>
+      </center>
+    </div>
+
+    <!-- XYZ event -->
+    <div class="event-info" id="xyz-event" >
+      <div class="containerr">
+        <h1 class="text-center">XYZ Event</h1>
+        <div class="parent-gallery">
+            <div class="gallery">
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal1.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal2.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal3.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal4.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal5.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal6.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal7.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal8.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal9.jpg" alt="image">
+                </picture>
+              </div>
+            </div>
+          </div>
+    </div>
+    
+      <center>
+          <button class="btn btn-home btn-primary"><a href="#">Download All Image</a></button>
+      </center>
+    </div>
+
+    <!-- new event -->
+    <div class="event-info" id="new-event" >
+      <div class="containerr">
+        <h1 class="text-center">New Event</h1>
+        <div class="parent-gallery">
+            <div class="gallery">
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal1.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal2.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal3.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal4.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal5.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal6.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal7.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal8.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal9.jpg" alt="image">
+                </picture>
+              </div>
+            </div>
+          </div>
+    </div>
+    
+      <center>
+          <button class="btn btn-home btn-primary"><a href="#">Download All Image</a></button>
+      </center>
+    </div>
+
+     <!-- birthday event -->
+     <div class="event-info" id="birthday-event" >
+      <div class="containerr">
+        <h1 class="text-center">birthday Event</h1>
+        <div class="parent-gallery">
+            <div class="gallery">
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal1.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal2.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal3.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal4.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal5.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal6.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal7.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal8.jpg" alt="image">
+                </picture>
+              </div>
+              <div class="box">
+                <div class="luz"></div>
+                <picture>
+                  <img src="assets/img/gal9.jpg" alt="image">
+                </picture>
+              </div>
+            </div>
+          </div>
+    </div>
+    
+      <center>
+          <button class="btn btn-home btn-primary"><a href="#">Download All Image</a></button>
+      </center>
+    </div>
+
+      <!-- birthday event -->
+      <div class="event-info" id="marriage-event" >
+        <div class="containerr">
+          <h1 class="text-center">Marriage Event</h1>
+          <div class="parent-gallery">
+              <div class="gallery ">
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal1.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal2.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal3.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal4.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal5.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal6.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal7.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal8.jpg" alt="image">
+                  </picture>
+                </div>
+                <div class="box">
+                  <div class="luz"></div>
+                  <picture>
+                    <img src="assets/img/gal9.jpg" alt="image">
+                  </picture>
+                </div>
+              </div>
+            </div>
+      </div>
+      
+        <center>
+            <button class="btn btn-home btn-primary"><a href="#">Download All Image</a></button>
+        </center>
+      </div>
+     
+    </div>
+</div>
+<!-- -------------- content end ---------- -->
+
+
+
+
+<!-- <div class="containerr">
+    <div class="parent-gallery">
+        <div class="gallery">
+          <div class="box">
+            <div class="luz"></div>
+            <picture>
+              <img src="assets/img/gal1.jpg" alt="image">
+            </picture>
+          </div>
+          <div class="box">
+            <div class="luz"></div>
+            <picture>
+              <img src="assets/img/gal2.jpg" alt="image">
+            </picture>
+          </div>
+          <div class="box">
+            <div class="luz"></div>
+            <picture>
+              <img src="assets/img/gal3.jpg" alt="image">
+            </picture>
+          </div>
+          <div class="box">
+            <div class="luz"></div>
+            <picture>
+              <img src="assets/img/gal4.jpg" alt="image">
+            </picture>
+          </div>
+          <div class="box">
+            <div class="luz"></div>
+            <picture>
+              <img src="assets/img/gal5.jpg" alt="image">
+            </picture>
+          </div>
+          <div class="box">
+            <div class="luz"></div>
+            <picture>
+              <img src="assets/img/gal6.jpg" alt="image">
+            </picture>
+          </div>
+          <div class="box">
+            <div class="luz"></div>
+            <picture>
+              <img src="assets/img/gal7.jpg" alt="image">
+            </picture>
+          </div>
+          <div class="box">
+            <div class="luz"></div>
+            <picture>
+              <img src="assets/img/gal8.jpg" alt="image">
+            </picture>
+          </div>
+          <div class="box">
+            <div class="luz"></div>
+            <picture>
+              <img src="assets/img/gal9.jpg" alt="image">
+            </picture>
+          </div>
+        </div>
+      </div>
+</div> -->
+
+
+<footer >
+    <div class="footer">
+      <div class="empty d-none d-md-block col-md-2"></div>
+      <div class="flex-grow-1"></div>
+      <div class="gap-4 col-md-6">
+        <div class="px-4 gx-0 gap-5 row">
+          <div class="d-flex flex-column mt-5 align-items-start col">
+            <strong>HEAD OFFICE</strong>
+            <div class="text-start">Saffron Software Solutions PVT. LTD.</div>
+            <div class="text-start">Pune, Maharashtra India-411047</div>
+          </div>
+          <div class="d-flex flex-column mt-5 align-items-start col">
+            <strong>CONTACT</strong>
+            <div>+91 96326 33153</div>
+            <div>+91 92261 24702</div>
+          </div>
+        </div>
+      </div>
+      <div class="d-none d-md-flex col-md-3">
+        <div class="contact">
+          <p>
+            Drop us a line two, we are open for Creative minds &amp; collaborations!
+          </p>
+          <a href="mailto:hello@fotoowl.ai">hello@saffron.ai</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="text-center">&copy;saffron.ai </p>
+    </div>
+</footer>
+    
+
+
+
+           
+
+    <!-- bootstrap JS 5.2 -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <script src="assets/js/custom.js"></script>
+   
+  </body>
+  </div>
+</html>

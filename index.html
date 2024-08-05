@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saffron.Ai </title>
+
+    <!-- favicon CSS -->
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!-- Custon CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- bootstrap CSS 5.2 -->
+    <link
+      href="assets/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    
+
+ 
+  </head>
+
+  <body style="background-color: #15191F;">
+
+    <nav class="navbar bg-faded fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-container">
+          <div class="navbar-main">
+            <div class="navbar-content">
+              <a class="flex-grow-1" href="/"
+                ><img id="logo" src="assets/img/logo-black.png" alt="saffron"
+              /></a>
+              <ul class="d-flex flex-row navbar-nav">              
+                <div class="">                  
+                    <button class="btn navbar-btn btn-solid btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                      Book Appoitment
+                  </button>
+                </div>
+              </ul>
+            </div>
+            <div class="collapse navbar-collapse">
+              <div class="">
+                <button type="button" class="btn navbar-btn btn-solid w-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  LOG IN
+                  </button>
+              </div>
+            </div>
+          </div>
+          <div class="">
+            <button type="button" class="btn navbar-btn btn-border nav-login" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              LOG IN
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+<!-- Modal -->
+<div class="login-modal modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"> 
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Log in</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            <form action="">
+                <label for="number"> Enter Number</label> 
+                <input type="text" name="number" id="number" placeholder="Username Or Number" required="required"> 
+
+                <label for="password"> Enter Password</label>
+                <input type="text" name="password" id="password" placeholder="Password" required="required">
+            </form>
+            <p> Don't Have an Account? <span class="already" data-bs-toggle="modal" data-bs-target="#register-modal">Register here</span></p>
+      </div>
+      <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Log In</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- register-modal -->
+<div class="register-modal modal fade" id="register-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"> 
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+            <form action="">
+                <label for="Name"> Enter Name</label> 
+                <input type="text" name="Name" id="Name" placeholder="Enter Your Name" required="required"> 
+
+                <label for="number"> Enter Email</label> 
+                <input type="text" name="number" id="number" placeholder="Enter Your E-mail" required="required"> 
+
+                <label for="password"> Create Your Password</label>
+                <input type="text" name="password" id="password" placeholder="Create Your Password" required="required">
+
+                <label for="password"> Confirm Password</label>
+                <input type="text" name="password" id="password" placeholder="Confirm Password" required="required">
+
+                <button type="submit" class="btn btn-primary register-btn">Register Now</button>
+                <p>Already have an Account? <span class="already" data-bs-toggle="modal" data-bs-target="#exampleModal">Log In</span></p>
+            </form>
+      </div>
+      <!-- <div class="modal-footer"> -->
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
+
+
+
+    <div class="secondary-container">
+        <div class="heading-container">
+          <!-- <img src="assets/img/bg.png" alt=""> -->
+          <h1>
+            <span class="intro-subheading">Media Asset Management</span> <br />
+            for Events
+          </h1>
+          <div class="intro-content">
+            Engage with your clients by sharing event photos via Face Recognition.
+            Create Portfolio and Collaborate with clients for photo selection
+          </div>
+          <a href="gallary.html">
+            <button type="button" class="btn btn-primary btn-home">
+              Download Your Photos
+            </button>
+          </a>
+        </div>
+        <div class="circle-camera">
+          <div class="ovarlay"></div>
+          <svg class="circles" width="100%" height="100%" viewBox="0 0 1400 1400">
+            <def>
+              <path
+                id="circle-1"
+                d="M250,700.5A450.5,450.5 0 1 11151,700.5A450.5,450.5 0 1 1250,700.5"
+              ></path>
+              <path
+                id="circle-2"
+                d="M382,700.5A318.5,318.5 0 1 11019,700.5A318.5,318.5 0 1 1382,700.5"
+              ></path>
+              <path
+                id="circle-3"
+                d="M487,700.5A213.5,213.5 0 1 1914,700.5A213.5,213.5 0 1 1487,700.5"
+              ></path>
+              <path
+                id="circle-4"
+                d="M567.5,700.5A133,133 0 1 1833.5,700.5A133,133 0 1 1567.5,700.5"
+              ></path>
+            </def>
+            <text class="circles__text circles__text--1">
+              <textPath
+                class="circles__text-path"
+                href="#circle-1"
+                aria-label=""
+                textLength="2830"
+              >
+                AI Powered Online Photo Galleries;
+              </textPath>
+            </text>
+            <text class="circles__text circles__text--2">
+              <textPath
+                class="circles__text-path"
+                href="#circle-2"
+                aria-label=""
+                textLength="2001"
+              >
+                Beautiful Image Gallery;
+              </textPath>
+            </text>
+            <text class="circles__text circles__text--3">
+              <textPath
+                class="circles__text-path"
+                href="#circle-3"
+                aria-label=""
+                textLength="1341"
+              >
+                Portfolio Builder;
+              </textPath>
+            </text>
+            <text class="circles__text circles__text--4">
+              <textPath
+                class="circles__text-path"
+                href="#circle-4"
+                aria-label=""
+                textLength="836"
+              >
+                Unlimited Image Storage;
+              </textPath>
+            </text>
+          </svg>
+          <div class="camera-container">
+            <div class="image-container">
+              <img
+                alt="Camera"
+                sizes="(max-width: 575.7px) 100vw, (max-width: 767.89px) 70vw,(max-width: 991.98px) 50vw, 30vw"
+                srcset="
+                  https://assets.fotoowl.ai/cdn-cgi/image/width=256/assets/landing-page/camera.png   256w,
+                  https://assets.fotoowl.ai/cdn-cgi/image/width=384/assets/landing-page/camera.png   384w,
+                  https://assets.fotoowl.ai/cdn-cgi/image/width=480/assets/landing-page/camera.png   480w,
+                  https://assets.fotoowl.ai/cdn-cgi/image/width=640/assets/landing-page/camera.png   640w,
+                  https://assets.fotoowl.ai/cdn-cgi/image/width=750/assets/landing-page/camera.png   750w,
+                  https://assets.fotoowl.ai/cdn-cgi/image/width=828/assets/landing-page/camera.png   828w,
+                  https://assets.fotoowl.ai/cdn-cgi/image/width=1080/assets/landing-page/camera.png 1080w,
+                  https://assets.fotoowl.ai/cdn-cgi/image/width=1200/assets/landing-page/camera.png 1200w,
+                  https://assets.fotoowl.ai/cdn-cgi/image/width=1920/assets/landing-page/camera.png 1920w,
+                  https://assets.fotoowl.ai/cdn-cgi/image/width=2048/assets/landing-page/camera.png 2048w,
+                  https://assets.fotoowl.ai/cdn-cgi/image/width=3840/assets/landing-page/camera.png 3840w
+                "
+                src="https://assets.fotoowl.ai/cdn-cgi/image/width=3840/assets/landing-page/camera.png"
+                decoding="async"
+                data-nimg="fill"
+                class="image"
+                loading="lazy"
+                style="
+                  position: absolute;
+                  height: 100%;
+                  width: 100%;
+                  left: 0;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  color: transparent;
+                "
+              />
+            </div>
+          </div>
+        </div>
+    </div>  
+
+    <!-- <div class="trust">
+        <h3 class="text-center mt-5">Trusted By 30,000+ Users</h3>
+
+        <div class="client-container">
+            <div class="mt-md-5 mt-2 client-row-container">
+              <div
+                class="logo-row1 d-flex gap-md-5 gap-4 justify-content-center align-items-center"
+              >
+                <div class="">
+                  <img
+                    height="70"
+                    class=""
+                    src="assets/img/1.png"
+                  />
+                </div>
+                <div class="">
+                  <img
+                    height="40"
+                    class=""
+                    src="assets/img/2.png"
+                  />
+                </div>
+                <div class="">
+                  <img
+                    height="90"
+                    class=""
+                    src="assets/img/3.png"
+                  />
+                </div>
+                <div class="">
+                  <img
+                    height="60"
+                    class=""
+                    src="assets/img/4.png"
+                  />
+                </div>
+                <div class="">
+                  <img
+                    height="60"
+                    class=""
+                    src="assets/img/5.png"
+                  />
+                </div>
+                <div class="">
+                  <img
+                    height="60"
+                    class=""
+                    src="assets/img/6.png"
+                  />
+                </div>
+                <div class="">
+                  <img
+                    height="50"
+                    class=""
+                    src="assets/img/7.png"
+                  />
+                </div>
+                <div class="">
+                    <img
+                      height="70"
+                      class=""
+                      src="assets/img/1.png"
+                    />
+                  </div>
+                  <div class="">
+                    <img
+                      height="40"
+                      class=""
+                      src="assets/img/2.png"
+                    />
+                  </div>
+                  <div class="">
+                    <img
+                      height="90"
+                      class=""
+                      src="assets/img/3.png"
+                    />
+                  </div>
+                  <div class="">
+                    <img
+                      height="60"
+                      class=""
+                      src="assets/img/4.png"
+                    />
+                  </div>
+                  <div class="">
+                    <img
+                      height="60"
+                      class=""
+                      src="assets/img/5.png"
+                    />
+                  </div>
+                  <div class="">
+                    <img
+                      height="60"
+                      class=""
+                      src="assets/img/6.png"
+                    />
+                  </div>
+                  <div class="">
+                    <img
+                      height="50"
+                      class=""
+                      src="assets/img/7.png"
+                    />
+                  </div>
+              </div>
+            </div>
+            <div class="mt-1 mt-md-4 client-row-container">
+                <div
+                class="logo-row1 d-flex gap-md-5 gap-4 justify-content-center align-items-center"
+              >
+              <div class="">
+                <img
+                  height="40"
+                  class=""
+                  src="assets/img/sany.png"
+                />
+              </div>
+              <div class="">
+                <img
+                  height="80"
+                  class=""
+                  src="assets/img/saudi.png"
+                />
+              </div>
+              <div class="">
+                <img
+                  height="70"
+                  class=""
+                  src="assets/img/maha.png"
+                />
+              </div>
+              <div class="">
+                <img
+                  height="50"
+                  class=""
+                  src="assets/img/redchariots.png"
+                />
+              </div>
+              <div class="">
+                <img
+                  height="50"
+                  class=""
+                  src="assets/img/wizcraft.png"
+                />
+              </div>
+              <div class="">
+                <img
+                  height="90"
+                  class=""
+                  src="assets/img/informa.png"
+                />
+              </div>
+              <div class="">
+                <img
+                  height="80"
+                  class=""
+                  src="assets/img/lnt.png"
+                />
+              </div>
+              <div class="">
+                <img
+                  height="40"
+                  class=""
+                  src="assets/img/sany.png"
+                />
+              </div>
+              <div class="">
+                <img
+                  height="80"
+                  class=""
+                  src="assets/img/saudi.png"
+                />
+              </div>
+              <div class="">
+                <img
+                  height="70"
+                  class=""
+                  src="assets/img/maha.png"
+                />
+              </div>
+              <div class="">
+                <img
+                  height="50"
+                  class=""
+                  src="assets/img/redchariots.png"
+                />
+              </div>
+              <div class="">
+                <img
+                  height="50"
+                  class=""
+                  src="assets/img/wizcraft.png"
+                />
+              </div>
+              <div class="">
+                <img
+                  height="90"
+                  class=""
+                  src="assets/img/informa.png"
+                />
+              </div>
+              <div class="">
+                <img
+                  height="80"
+                  class=""
+                  src="assets/img/lnt.png"
+                />
+              </div>
+                
+                
+              </div>
+            </div>
+          </div>
+    </div> -->
+        
+
+    <div class="pricing" id="pricing">
+        <div class="text-center">
+          <h2 class="primary">Pricing</h2>
+          <h4>Events &amp; Corporates</h4>
+          <div>
+            Promote and Give visibility to your sponsors and Share Real-Time event
+            photos to everyone with 100% privacy
+          </div>
+          <div>
+            Customise your notifications, Messages, Emails and Address your
+            attendees in style
+          </div>
+        
+          <div class="d-flex justify-content-center gap-3 mt-3">
+            <!-- <button class="btn btn-primary mt-2">Book Demo</button> -->
+
+            <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+              Book Appointment
+            </button>
+            <!-- Modal -->
+            <div class="book-modal modal fade " id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Book Appointment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-lg-5 col-12">
+                                <form action="">
+                                    <label for="Username"> Username</label> 
+                                    <input type="text" name="Username" id="Username" placeholder="Enter Username" required="required">
+                                    
+                                    <label for="email"> Number</label> 
+                                    <input type="email" name="email" id="email" placeholder="Enter Number" required="required">
+                    
+                                    <label for="password"> Password</label>
+                                    <input type="text" name="password" id="password" placeholder="Enter Password" required="required">
+                                </form>
+                            </div>
+                            <div class="col-lg-7 col-12">
+                                <div class="calendar"></div>
+
+                            </div>
+                           
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+          </div>
+          
+         
+        </div>
+      </div>
+
+    <!-- Button trigger modal -->
+
+<footer >
+    <div class="footer">
+      <div class="empty d-none d-md-block col-md-2"></div>
+      <div class="flex-grow-1"></div>
+      <div class="gap-4 col-md-6">
+        <div class="px-4 gx-0 gap-5 row">
+          <div class="d-flex flex-column mt-5 align-items-start col">
+            <strong>HEAD OFFICE</strong>
+            <div class="text-start">Saffron Software Solutions PVT. LTD.</div>
+            <div class="text-start">Pune, Maharashtra India-411047</div>
+          </div>
+          <div class="d-flex flex-column mt-5 align-items-start col">
+            <strong>CONTACT</strong>
+            <div>+91 96326 33153</div>
+            <div>+91 92261 24702</div>
+          </div>
+        </div>
+      </div>
+      <div class="d-none d-md-flex col-md-3">
+        <div class="contact">
+          <p>
+            Drop us a line two, we are open for Creative minds &amp; collaborations!
+          </p>
+          <a href="mailto:hello@fotoowl.ai">hello@saffron.ai</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="text-center">&copy;saffron.ai </p>
+    </div>
+</footer>
+    
+
+
+
+           
+
+
+    <!-- bootstrap JS 5.2 -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <script src="assets/js/custom.js"></script>
+   
+  </body>
+  </div>
+</html>
